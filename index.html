@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Speech</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-image: url('data:image/jpeg;base64,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');
+            background-size: cover;
+            background-position: center;
+        }
+        h1 {
+            color: red;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        textarea {
+            width: 80%;
+            height: 100px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Text to Speech</h1>
+    <textarea id="textInput" placeholder="Enter your text here..."></textarea><br><br>
+
+    <button onclick="convertTextToSpeech()">Convert to Audio</button><br><br>
+
+    <button id="downloadButton" style="display:none;" onclick="downloadAudio()">Download Audio</button>
+
+    <script>
+        let audioBlob = null;  // This will hold the audio data for downloading
+
+        // Convert text to speech and record audio
+        function convertTextToSpeech() {
+            const text = document.getElementById("textInput").value;
+
+            if (text === "") {
+                alert("Please enter some text!");
+                return;
+            }
+
+            // Use SpeechSynthesis to speak the text
+            const speech = new SpeechSynthesisUtterance(text);
+            const selectedVoice = window.speechSynthesis.getVoices()[0]; // Set a default voice
+            speech.voice = selectedVoice;
+            speech.lang = "en-US";  // You can change this to other languages if you want
+
+            speech.onend = function() {
+                // When the speech is finished, enable the download button
+                enableDownloadButton();
+            };
+
+            // Start speaking the text
+            window.speechSynthesis.speak(speech);
+
+            // Convert the speech to an audio blob for download
+            recordAudio(text);
+        }
+
+        // Record the audio and generate a downloadable file
+        function recordAudio(text) {
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            const mediaStreamDestination = audioContext.createMediaStreamDestination();
+
+            // Create an audio source (from SpeechSynthesis)
+            const voice = new SpeechSynthesisUtterance(text);
+            const audioSourceNode = audioContext.createBufferSource();
+            audioSourceNode.connect(mediaStreamDestination);
+
+            const audioBlob = new Blob([mediaStreamDestination.stream], { type: 'audio/wav' });
+            window.audioBlob = audioBlob;  // Save the Blob for later download
+        }
+
+        // Enable the download button after conversion is done
+        function enableDownloadButton() {
+            const downloadButton = document.getElementById("downloadButton");
+            downloadButton.style.display = "inline-block"; // Make the download button visible
+        }
+
+        // Download the audio as a .wav file
+        function downloadAudio() {
+            if (!audioBlob) {
+                alert("No audio available for download.");
+                return;
+            }
+
+            const url = URL.createObjectURL(audioBlob);
+            const link = document.createElement("a");
+            link.href = url;
+            link.download = "converted_audio.wav";
+            link.click();
+        }
+    </script>
+</body>
+</html>
